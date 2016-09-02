@@ -10,16 +10,16 @@ var gameBoardContainer = document.getElementById("gameboard");
 // with the 2D array
 
 var letterConversion = {
-	"A": 1,
-	"B": 2,
-	"C": 3,
-	"D": 4,
-	"E": 5,
-	"F": 6,
-	"G": 7,
-	"H": 8,
-	"I": 9,
-	"J": 10
+	"A": 0,
+	"B": 1,
+	"C": 2,
+	"D": 3,
+	"E": 4,
+	"F": 5,
+	"G": 6,
+	"H": 7,
+	"I": 8,
+	"J": 9
 }
 	var letterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 // makes the grid columns and rows
@@ -64,6 +64,10 @@ var gameBoard = [
 
 function fireTorpedo() {
 
-	var userInput = $("#inputText").val;
+	var userInput = $("#inputText").val();
+  rowletter = userInput.substring(0,1);
+  column = userInput.substring(1,2);
+
+ 	var row = letterConversion[rowletter];
 
 }
