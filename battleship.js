@@ -49,6 +49,8 @@ for (i = 0; i < cols; i++) {
 }
 
 // Hardcoded 2D array to indicate where the ships are placed
+var convertedRow;
+var rowletter;
 var gameBoard = [
 				[0,0,0,1,1,1,1,0,0,0],
 				[0,0,0,0,0,0,0,0,0,0],
@@ -65,9 +67,9 @@ var gameBoard = [
 function fireTorpedo() {
 
 	var userInput = $("#inputText").val();
-  rowletter = userInput.substring(0,1);
-  column = userInput.substring(1,2);
+  rowletter = userInput.substring(0, 1);
+	 column = userInput.substring(1,2);
+convertedRow = letterConversion[rowletter];
 
- 	var row = letterConversion[rowletter];
-
+battleshipguess = rowletter[0][3];
 }
