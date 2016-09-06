@@ -66,10 +66,14 @@ var gameBoard = [
 
 function fireTorpedo() {
 
-	var userInput = $("#inputText").val();
-  rowletter = userInput.substring(0, 1);
-	 column = userInput.substring(1,2);
-convertedRow = letterConversion[rowletter];
+	 var userInput = $("#textInput").val();
+   var rowletter = userInput.substring(0, 1);
+	 var column = userInput.substring(1,2);
+	 var convertedRow = letterConversion[rowletter];
+   //var myDivText = "#s" + row + column;
 
-battleshipguess = rowletter[0][3];
+		//if(battleshipGuess = 1) {
+			//$("#myDivText").css("background", "red");
+		//}
+
 }
