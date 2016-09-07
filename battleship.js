@@ -70,10 +70,9 @@ function fireTorpedo() {
    var rowletter = userInput.substring(0, 1);
 	 var column = userInput.substring(1,2);
 	 var convertedRow = letterConversion[rowletter];
-   //var myDivText = "#s" + row + column;
 
-		//if(battleshipGuess = 1) {
-			//$("#myDivText").css("background", "red");
-		//}
+	 var myDivText = "#s" + convertedRow + column;
+
+
 
 }
