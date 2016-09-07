@@ -70,6 +70,7 @@ function fireTorpedo() {
    var rowletter = userInput.substring(0, 1);
 	 var column = userInput.substring(1,2);
 	 var convertedRow = letterConversion[rowletter];
+   var battleshipGuess = gameBoard[convertedRow][column];
 
 	 var myDivText = "#s" + convertedRow + column;
 
