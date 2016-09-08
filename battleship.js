@@ -68,11 +68,19 @@ function fireTorpedo() {
 
 	 var userInput = $("#textInput").val();
    var rowletter = userInput.substring(0, 1);
-	 var column = userInput.substring(1,2);
+	 var column = userInput.substring(1,2) - 1;
 	 var convertedRow = letterConversion[rowletter];
    var battleshipGuess = gameBoard[convertedRow][column];
+	 //console.log(userInput, convertedRow, column);
 
 	 var myDivText = "#s" + convertedRow + column;
+
+	 if (battleshipGuess == 1) {
+		 $(myDivText).css("background-color", "red");
+	 }
+	 else {
+		 $(myDivText).css("background-color", "grey");
+	 }
 
 
 
