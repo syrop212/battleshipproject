@@ -51,6 +51,7 @@ for (i = 0; i < cols; i++) {
 // Hardcoded 2D array to indicate where the ships are placed
 var convertedRow;
 var rowletter;
+var hitCount = 0;
 var gameBoard = [
 				[0,0,0,1,1,1,1,0,0,0],
 				[0,0,0,0,0,0,0,0,0,0],
@@ -68,7 +69,7 @@ function fireTorpedo() {
 
 	 var userInput = $("#textInput").val();
    var rowletter = userInput.substring(0, 1);
-	 var column = userInput.substring(1,2) - 1;
+	 var column = userInput.substring(1,3) - 1;
 	 var convertedRow = letterConversion[rowletter];
    var battleshipGuess = gameBoard[convertedRow][column];
 	 //console.log(userInput, convertedRow, column);
@@ -77,11 +78,19 @@ function fireTorpedo() {
 
 	 if (battleshipGuess == 1) {
 		 $(myDivText).css("background-color", "red");
+		 hitCount  ++;
+		 //console.log(hitCount);
 	 }
 	 else {
 		 $(myDivText).css("background-color", "grey");
 	 }
 
+	 if (hitCount == 17) {
+		 $("#instructionsArea").text("YOU SUNK ALL MY BATTLESHIPS!");
+	 }
+	 else {
+		false;
+	 }
 
 
 }
